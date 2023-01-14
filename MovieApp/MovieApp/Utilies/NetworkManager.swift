@@ -7,9 +7,9 @@
 
 import Foundation
 
-class NetworkService {
+class NetworkManager {
     
-    static let shared = NetworkService()
+    static let shared = NetworkManager()
     private init() {}
     
     func download(url:URL, completion:@escaping(_ result:Result<Data,Error>)->()) {

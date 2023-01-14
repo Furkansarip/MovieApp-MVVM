@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct MovieModel {
+struct MovieModel : Decodable {
     let results : [MovieResults]?
 }
 
-struct MovieResults {
+struct MovieResults : Decodable {
     let id : Int?
     let posterPath:String?
     
