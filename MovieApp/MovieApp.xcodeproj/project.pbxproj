@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		742088E72972BB370010B625 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088E62972BB370010B625 /* HomeViewController.swift */; };
 		742088E92972BB940010B625 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088E82972BB940010B625 /* NetworkService.swift */; };
+		742088EC2972D71A0010B625 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088EB2972D71A0010B625 /* MovieModel.swift */; };
+		742088EE2972F0130010B625 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088ED2972F0130010B625 /* ErrorModel.swift */; };
 		7490E0B029729F4600F5A731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0AF29729F4600F5A731 /* AppDelegate.swift */; };
 		7490E0B229729F4600F5A731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0B129729F4600F5A731 /* SceneDelegate.swift */; };
 		7490E0B429729F4600F5A731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0B329729F4600F5A731 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* Begin PBXFileReference section */
 		742088E62972BB370010B625 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		742088E82972BB940010B625 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		742088EB2972D71A0010B625 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		742088ED2972F0130010B625 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		7490E0AC29729F4600F5A731 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7490E0AF29729F4600F5A731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7490E0B129729F4600F5A731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
+		742088EA2972D70E0010B625 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				742088EB2972D71A0010B625 /* MovieModel.swift */,
+				742088ED2972F0130010B625 /* ErrorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7490E0A329729F4600F5A731 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +117,7 @@
 		7490E0AE29729F4600F5A731 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				742088EA2972D70E0010B625 /* Models */,
 				742088E42972BAF40010B625 /* Services */,
 				742088E32972BABE0010B625 /* Components */,
 				742088E22972BA8C0010B625 /* Core */,
@@ -188,6 +202,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742088EE2972F0130010B625 /* ErrorModel.swift in Sources */,
+				742088EC2972D71A0010B625 /* MovieModel.swift in Sources */,
 				742088E92972BB940010B625 /* NetworkService.swift in Sources */,
 				7490E0B429729F4600F5A731 /* ViewController.swift in Sources */,
 				7490E0B029729F4600F5A731 /* AppDelegate.swift in Sources */,

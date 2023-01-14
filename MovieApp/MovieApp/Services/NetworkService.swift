@@ -18,6 +18,7 @@ class NetworkService {
                 completion(.failure(error))
                 return
             }
+            
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 completion(.failure(URLError(.badServerResponse)))
                 return
