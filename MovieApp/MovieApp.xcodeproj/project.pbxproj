@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		74122B622973561A00E6ED58 /* NetworkServçe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74122B612973561A00E6ED58 /* NetworkServçe.swift */; };
+		74122B622973561A00E6ED58 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74122B612973561A00E6ED58 /* NetworkService.swift */; };
 		742088E72972BB370010B625 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088E62972BB370010B625 /* HomeViewController.swift */; };
 		742088E92972BB940010B625 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088E82972BB940010B625 /* NetworkManager.swift */; };
 		742088EC2972D71A0010B625 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088EB2972D71A0010B625 /* MovieModel.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74122B612973561A00E6ED58 /* NetworkServçe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkServçe.swift"; sourceTree = "<group>"; };
+		74122B612973561A00E6ED58 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		742088E62972BB370010B625 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		742088E82972BB940010B625 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		742088EB2972D71A0010B625 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		742088E42972BAF40010B625 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				74122B612973561A00E6ED58 /* NetworkServçe.swift */,
+				74122B612973561A00E6ED58 /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74122B622973561A00E6ED58 /* NetworkServçe.swift in Sources */,
+				74122B622973561A00E6ED58 /* NetworkService.swift in Sources */,
 				742088EE2972F0130010B625 /* ErrorModel.swift in Sources */,
 				742088EC2972D71A0010B625 /* MovieModel.swift in Sources */,
 				742088E92972BB940010B625 /* NetworkManager.swift in Sources */,
