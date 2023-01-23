@@ -19,4 +19,12 @@ struct MovieResults : Decodable {
         case id
         case posterPath = "poster_path"
     }
+    
+    var _id : Int {
+        id ?? Int.min
+    }
+    
+    var _posterPath : String {
+        posterPath ?? ""
+    }
 }

@@ -13,8 +13,10 @@ class NetworkManager {
     private init() {}
     
     func download(url:URL, completion:@escaping(_ result:Result<Data,Error>)->()) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
+        print(url)
+        let dataTask = URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
+                
                 completion(.failure(error))
                 return
             }
@@ -28,7 +30,8 @@ class NetworkManager {
                 completion(.failure(URLError(.badURL)))
                 return
             }
-            
+            completion(.success(data))
         }
+        dataTask.resume()
     }
 }

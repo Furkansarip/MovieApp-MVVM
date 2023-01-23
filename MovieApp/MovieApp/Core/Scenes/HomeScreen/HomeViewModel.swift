@@ -9,18 +9,31 @@ import Foundation
 
 protocol HomeViewModelProtocol {
     func viewDidLoad()
+    func getMovies()
     var view : HomeScreenProtocol? { get set }
 }
 
 final class HomeViewModel {
    weak var view: HomeScreenProtocol?
+    private var service = MovieService()
+    var movies = [MovieResults]()
 }
 
 extension HomeViewModel : HomeViewModelProtocol {
+ 
     func viewDidLoad() {
         view?.configureVC()
         view?.configureCollectionView()
+        getMovies()
     }
     
+    func getMovies() {
+        service.getMovies { [weak self] returnedMovies in
+            guard let self = self else { return }
+            guard let returnedMovies = returnedMovies else { return }
+            self.movies = returnedMovies
+            print(returnedMovies)
+        }
+    }
     
 }

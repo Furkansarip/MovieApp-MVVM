@@ -10,10 +10,11 @@ import UIKit
 class MovieCell: UICollectionViewCell {
     
     static let reuseID = "MovieCell"
-    
+    private var posterPathImage : PosterImageView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureCell()
+        configurePosterPath()
     }
     
     required init?(coder: NSCoder) {
@@ -21,6 +22,20 @@ class MovieCell: UICollectionViewCell {
     }
     
     private func configureCell() {
-        backgroundColor = .orange
+        backgroundColor = .systemGray5
+        layer.cornerRadius = 16
+        clipsToBounds = true
+        
+    }
+    
+    func setCell(movie : MovieResults) {
+        posterPathImage.downloadImages(movie: movie)
+    }
+    
+    private func configurePosterPath() {
+        posterPathImage = PosterImageView(frame: .zero)
+        addSubview(posterPathImage)
+        posterPathImage.pinToEdges(view: self)
+        backgroundColor = .systemPink
     }
 }
