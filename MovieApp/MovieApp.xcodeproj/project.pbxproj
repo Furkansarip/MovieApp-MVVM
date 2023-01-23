@@ -13,6 +13,11 @@
 		742088EC2972D71A0010B625 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088EB2972D71A0010B625 /* MovieModel.swift */; };
 		742088EE2972F0130010B625 /* ErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742088ED2972F0130010B625 /* ErrorModel.swift */; };
 		74421C8A297C11B5001533F8 /* APIURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C89297C11B5001533F8 /* APIURLs.swift */; };
+		74421C8C297D816C001533F8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C8B297D816C001533F8 /* HomeViewModel.swift */; };
+		74421C8F297D87E0001533F8 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C8E297D87E0001533F8 /* UIView+Ext.swift */; };
+		74421C91297D88B8001533F8 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C90297D88B8001533F8 /* UIHelper.swift */; };
+		74421C93297D8A95001533F8 /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C92297D8A95001533F8 /* CGFloat+Ext.swift */; };
+		74421C95297D8D23001533F8 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C94297D8D23001533F8 /* MovieCell.swift */; };
 		7490E0B029729F4600F5A731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0AF29729F4600F5A731 /* AppDelegate.swift */; };
 		7490E0B229729F4600F5A731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0B129729F4600F5A731 /* SceneDelegate.swift */; };
 		7490E0B429729F4600F5A731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0B329729F4600F5A731 /* ViewController.swift */; };
@@ -27,6 +32,11 @@
 		742088EB2972D71A0010B625 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		742088ED2972F0130010B625 /* ErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorModel.swift; sourceTree = "<group>"; };
 		74421C89297C11B5001533F8 /* APIURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURLs.swift; sourceTree = "<group>"; };
+		74421C8B297D816C001533F8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		74421C8E297D87E0001533F8 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		74421C90297D88B8001533F8 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		74421C92297D8A95001533F8 /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		74421C94297D8D23001533F8 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		7490E0AC29729F4600F5A731 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7490E0AF29729F4600F5A731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7490E0B129729F4600F5A731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +70,7 @@
 			children = (
 				742088E82972BB940010B625 /* NetworkManager.swift */,
 				74421C89297C11B5001533F8 /* APIURLs.swift */,
+				74421C90297D88B8001533F8 /* UIHelper.swift */,
 			);
 			path = Utilies;
 			sourceTree = "<group>";
@@ -75,6 +86,7 @@
 		742088E32972BABE0010B625 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				74421C94297D8D23001533F8 /* MovieCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -90,7 +102,9 @@
 		742088E52972BB120010B625 /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
+				742088E32972BABE0010B625 /* Components */,
 				742088E62972BB370010B625 /* HomeViewController.swift */,
+				74421C8B297D816C001533F8 /* HomeViewModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -102,6 +116,15 @@
 				742088ED2972F0130010B625 /* ErrorModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		74421C8D297D87C5001533F8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				74421C8E297D87E0001533F8 /* UIView+Ext.swift */,
+				74421C92297D8A95001533F8 /* CGFloat+Ext.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7490E0A329729F4600F5A731 = {
@@ -123,9 +146,9 @@
 		7490E0AE29729F4600F5A731 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				74421C8D297D87C5001533F8 /* Extensions */,
 				742088EA2972D70E0010B625 /* Models */,
 				742088E42972BAF40010B625 /* Services */,
-				742088E32972BABE0010B625 /* Components */,
 				742088E22972BA8C0010B625 /* Core */,
 				742088E12972BA7F0010B625 /* Utilies */,
 				7490E0AF29729F4600F5A731 /* AppDelegate.swift */,
@@ -208,15 +231,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74421C95297D8D23001533F8 /* MovieCell.swift in Sources */,
 				74122B622973561A00E6ED58 /* MovieService.swift in Sources */,
+				74421C8F297D87E0001533F8 /* UIView+Ext.swift in Sources */,
 				742088EE2972F0130010B625 /* ErrorModel.swift in Sources */,
 				742088EC2972D71A0010B625 /* MovieModel.swift in Sources */,
+				74421C8C297D816C001533F8 /* HomeViewModel.swift in Sources */,
 				742088E92972BB940010B625 /* NetworkManager.swift in Sources */,
 				7490E0B429729F4600F5A731 /* ViewController.swift in Sources */,
 				7490E0B029729F4600F5A731 /* AppDelegate.swift in Sources */,
 				7490E0B229729F4600F5A731 /* SceneDelegate.swift in Sources */,
 				74421C8A297C11B5001533F8 /* APIURLs.swift in Sources */,
 				742088E72972BB370010B625 /* HomeViewController.swift in Sources */,
+				74421C91297D88B8001533F8 /* UIHelper.swift in Sources */,
+				74421C93297D8A95001533F8 /* CGFloat+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
