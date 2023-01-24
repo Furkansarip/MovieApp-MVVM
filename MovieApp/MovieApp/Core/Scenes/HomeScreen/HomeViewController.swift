@@ -54,5 +54,16 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         return cell
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+     
+        
+        if offsetY >= contentHeight - (2*height) {
+            print("bla")
+        }
+    }
+    
     
 }

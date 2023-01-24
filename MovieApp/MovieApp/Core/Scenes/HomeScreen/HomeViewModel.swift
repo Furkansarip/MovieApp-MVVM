@@ -28,11 +28,11 @@ extension HomeViewModel : HomeViewModelProtocol {
     }
     
     func getMovies() {
-        service.getMovies { [weak self] returnedMovies in
+        service.getMovies(page: 1) { [weak self] returnedMovies in
             guard let self = self else { return }
             guard let returnedMovies = returnedMovies else { return }
             self.movies = returnedMovies
-            print(returnedMovies)
+        
         }
     }
     

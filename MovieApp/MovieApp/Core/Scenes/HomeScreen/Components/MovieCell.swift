@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieCell: UICollectionViewCell {
+final class MovieCell: UICollectionViewCell {
     
     static let reuseID = "MovieCell"
     private var posterPathImage : PosterImageView!
@@ -26,6 +26,12 @@ class MovieCell: UICollectionViewCell {
         layer.cornerRadius = 16
         clipsToBounds = true
         
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        posterPathImage.image = nil
+        posterPathImage.cancelDownloading()
     }
     
     func setCell(movie : MovieResults) {

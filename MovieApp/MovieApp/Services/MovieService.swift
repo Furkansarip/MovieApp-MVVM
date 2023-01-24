@@ -8,7 +8,7 @@
 import Foundation
 
 class MovieService {
-    func getMovies(completion:@escaping ([MovieResults]?)->()) {
+    func getMovies(page:Int,completion:@escaping ([MovieResults]?)->()) {
         guard let url = URL(string: APIURLs.popularMovies(page: 1)) else { return }
         
         NetworkManager.shared.download(url: url) { [weak self] result in

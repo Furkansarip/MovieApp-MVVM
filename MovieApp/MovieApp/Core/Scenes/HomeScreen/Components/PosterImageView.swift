@@ -7,8 +7,9 @@
 
 import UIKit
 
-class PosterImageView: UIImageView {
+final class PosterImageView: UIImageView {
 
+    private var dataTask : URLSessionDataTask?
     override init(frame: CGRect) {
         super.init(frame: frame)
         translatesAutoresizingMaskIntoConstraints = false
@@ -21,14 +22,25 @@ class PosterImageView: UIImageView {
     func downloadImages(movie : MovieResults) {
        guard let url = URL(string: APIURLs.imageURL(posterPath: movie._posterPath)) else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                self.image = UIImage(data: data)
-            }
+        dataTask = NetworkManager.shared.download(url: url, completion: { [weak self] result in
+            guard let self = self else { return }
             
-        }.resume()
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.image = UIImage(data: data)
+                }
+            case .failure(_):
+                break
+            }
+        })
+        dataTask?.resume()
         
+    }
+    
+    func cancelDownloading() {
+        dataTask?.cancel()
+        dataTask = nil
     }
     
 
