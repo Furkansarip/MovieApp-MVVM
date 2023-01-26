@@ -10,6 +10,7 @@ import UIKit
 protocol HomeScreenProtocol : AnyObject {
     func configureVC()
     func configureCollectionView()
+    func reloadCollectionView()
 }
 
 final class HomeViewController: UIViewController {
@@ -26,6 +27,12 @@ final class HomeViewController: UIViewController {
 }
 
 extension HomeViewController : HomeScreenProtocol {
+    func reloadCollectionView() {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
     func configureVC() {
         view.backgroundColor = .systemBackground
     }
@@ -61,7 +68,8 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
      
         
         if offsetY >= contentHeight - (2*height) {
-            print("bla")
+            print("hello")
+            viewModel.getMovies()
         }
     }
     

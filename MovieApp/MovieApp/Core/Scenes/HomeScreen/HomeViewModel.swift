@@ -17,6 +17,7 @@ final class HomeViewModel {
    weak var view: HomeScreenProtocol?
     private var service = MovieService()
     var movies = [MovieResults]()
+    var page : Int = 1
 }
 
 extension HomeViewModel : HomeViewModelProtocol {
@@ -28,11 +29,12 @@ extension HomeViewModel : HomeViewModelProtocol {
     }
     
     func getMovies() {
-        service.getMovies(page: 1) { [weak self] returnedMovies in
+        service.getMovies(page: page) { [weak self] returnedMovies in
             guard let self = self else { return }
             guard let returnedMovies = returnedMovies else { return }
-            self.movies = returnedMovies
-        
+            self.movies.append(contentsOf: returnedMovies)
+            self.page += 1
+            self.view?.reloadCollectionView()
         }
     }
     
