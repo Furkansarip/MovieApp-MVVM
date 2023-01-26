@@ -27,11 +27,7 @@ final class HomeViewController: UIViewController {
 }
 
 extension HomeViewController : HomeScreenProtocol {
-    func reloadCollectionView() {
-        DispatchQueue.main.async {
-            self.collectionView.reloadData()
-        }
-    }
+    
     
     func configureVC() {
         view.backgroundColor = .systemBackground
@@ -46,6 +42,10 @@ extension HomeViewController : HomeScreenProtocol {
         collectionView.delegate = self
         collectionView.dataSource = self
         
+    }
+    
+    func reloadCollectionView() {
+        collectionView.reloadOnMainThread()
     }
     
 }
