@@ -10,6 +10,7 @@ import Foundation
 protocol HomeViewModelProtocol {
     func viewDidLoad()
     func getMovies()
+    func getDetail(id:Int)
     var view : HomeScreenProtocol? { get set }
 }
 
@@ -21,6 +22,7 @@ final class HomeViewModel {
 }
 
 extension HomeViewModel : HomeViewModelProtocol {
+   
  
     func viewDidLoad() {
         view?.configureVC()
@@ -36,6 +38,16 @@ extension HomeViewModel : HomeViewModelProtocol {
             self.page += 1
             print(self.page)
             self.view?.reloadCollectionView()
+        }
+        
+    }
+    
+    func getDetail(id: Int) {
+        service.movieDetail(id: id) { [weak self] returnedDetail in
+            guard let self = self else { return }
+            guard let returnedDetail = returnedDetail else { return }
+            print(returnedDetail)
+           
         }
     }
     

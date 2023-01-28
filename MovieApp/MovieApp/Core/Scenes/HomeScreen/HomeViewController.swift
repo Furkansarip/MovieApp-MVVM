@@ -11,6 +11,7 @@ protocol HomeScreenProtocol : AnyObject {
     func configureVC()
     func configureCollectionView()
     func reloadCollectionView()
+    
 }
 
 final class HomeViewController: UIViewController {
@@ -59,6 +60,10 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCell.reuseID, for: indexPath) as? MovieCell else { return UICollectionViewCell() }
         cell.setCell(movie: viewModel.movies[indexPath.item])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.getDetail(id: viewModel.movies[indexPath.item]._id)
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
