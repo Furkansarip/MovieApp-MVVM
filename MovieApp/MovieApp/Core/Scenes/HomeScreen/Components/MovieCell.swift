@@ -42,6 +42,6 @@ final class MovieCell: UICollectionViewCell {
         posterPathImage = PosterImageView(frame: .zero)
         addSubview(posterPathImage)
         posterPathImage.pinToEdges(view: self)
-        backgroundColor = .systemPink
+        
     }
 }

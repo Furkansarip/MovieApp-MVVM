@@ -20,6 +20,8 @@
 		74421C95297D8D23001533F8 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C94297D8D23001533F8 /* MovieCell.swift */; };
 		74421C97297EFF7B001533F8 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C96297EFF7B001533F8 /* PosterImageView.swift */; };
 		74421C99298322E3001533F8 /* UICollectionView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74421C98298322E3001533F8 /* UICollectionView+Ext.swift */; };
+		7487E8E029883CE3001F715E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7487E8DF29883CE3001F715E /* DetailViewController.swift */; };
+		7487E8E229884229001F715E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7487E8E129884229001F715E /* DetailViewModel.swift */; };
 		7490E0B029729F4600F5A731 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0AF29729F4600F5A731 /* AppDelegate.swift */; };
 		7490E0B229729F4600F5A731 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0B129729F4600F5A731 /* SceneDelegate.swift */; };
 		7490E0B429729F4600F5A731 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7490E0B329729F4600F5A731 /* ViewController.swift */; };
@@ -41,6 +43,8 @@
 		74421C94297D8D23001533F8 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		74421C96297EFF7B001533F8 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
 		74421C98298322E3001533F8 /* UICollectionView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Ext.swift"; sourceTree = "<group>"; };
+		7487E8DF29883CE3001F715E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7487E8E129884229001F715E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		7490E0AC29729F4600F5A731 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7490E0AF29729F4600F5A731 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7490E0B129729F4600F5A731 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		742088E02972BA720010B625 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7487E8DE29883CC0001F715E /* DetailScreen */,
 				742088E52972BB120010B625 /* HomeScreen */,
 			);
 			path = Scenes;
@@ -131,6 +136,15 @@
 				74421C98298322E3001533F8 /* UICollectionView+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7487E8DE29883CC0001F715E /* DetailScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7487E8DF29883CE3001F715E /* DetailViewController.swift */,
+				7487E8E129884229001F715E /* DetailViewModel.swift */,
+			);
+			path = DetailScreen;
 			sourceTree = "<group>";
 		};
 		7490E0A329729F4600F5A731 = {
@@ -238,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74421C95297D8D23001533F8 /* MovieCell.swift in Sources */,
+				7487E8E029883CE3001F715E /* DetailViewController.swift in Sources */,
 				74122B622973561A00E6ED58 /* MovieService.swift in Sources */,
 				74421C8F297D87E0001533F8 /* UIView+Ext.swift in Sources */,
 				742088EE2972F0130010B625 /* ErrorModel.swift in Sources */,
@@ -249,6 +264,7 @@
 				7490E0B429729F4600F5A731 /* ViewController.swift in Sources */,
 				7490E0B029729F4600F5A731 /* AppDelegate.swift in Sources */,
 				7490E0B229729F4600F5A731 /* SceneDelegate.swift in Sources */,
+				7487E8E229884229001F715E /* DetailViewModel.swift in Sources */,
 				74421C8A297C11B5001533F8 /* APIURLs.swift in Sources */,
 				742088E72972BB370010B625 /* HomeViewController.swift in Sources */,
 				74421C91297D88B8001533F8 /* UIHelper.swift in Sources */,

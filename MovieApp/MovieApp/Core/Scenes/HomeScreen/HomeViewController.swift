@@ -11,7 +11,7 @@ protocol HomeScreenProtocol : AnyObject {
     func configureVC()
     func configureCollectionView()
     func reloadCollectionView()
-    
+    func navigateToDetailScreen(movie:MovieResults)
 }
 
 final class HomeViewController: UIViewController {
@@ -32,6 +32,7 @@ extension HomeViewController : HomeScreenProtocol {
     
     func configureVC() {
         view.backgroundColor = .systemBackground
+        title = "Popular Movies"
     }
     
     func configureCollectionView() {
@@ -47,6 +48,14 @@ extension HomeViewController : HomeScreenProtocol {
     
     func reloadCollectionView() {
         collectionView.reloadOnMainThread()
+    }
+    
+    func navigateToDetailScreen(movie:MovieResults) {
+        DispatchQueue.main.async {
+            let detailVC = DetailViewController(movie: movie)
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        }
+       
     }
     
 }
@@ -73,7 +82,7 @@ extension HomeViewController : UICollectionViewDelegate,UICollectionViewDataSour
      
         
         if offsetY >= contentHeight - (2*height) {
-            print("hello")
+            
             viewModel.getMovies()
         }
     }

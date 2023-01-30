@@ -36,7 +36,6 @@ extension HomeViewModel : HomeViewModelProtocol {
             guard let returnedMovies = returnedMovies else { return }
             self.movies.append(contentsOf: returnedMovies)
             self.page += 1
-            print(self.page)
             self.view?.reloadCollectionView()
         }
         
@@ -46,7 +45,7 @@ extension HomeViewModel : HomeViewModelProtocol {
         service.movieDetail(id: id) { [weak self] returnedDetail in
             guard let self = self else { return }
             guard let returnedDetail = returnedDetail else { return }
-            print(returnedDetail)
+            self.view?.navigateToDetailScreen(movie: returnedDetail)
            
         }
     }
